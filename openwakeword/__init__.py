@@ -3,7 +3,34 @@ from openwakeword.model import Model
 from openwakeword.vad import VAD
 from openwakeword.custom_verifier_model import train_custom_verifier
 
-__all__ = ['Model', 'VAD', 'train_custom_verifier']
+# ESP32 Integration modules
+from openwakeword.model_loader import (
+    ModelLoader,
+    PlaceholderModelLoader,
+    EdgeImpulseModelLoader,
+    CustomModelLoader,
+    ModelLoaderFactory
+)
+from openwakeword.esp32_integration import (
+    ESP32AudioConfig,
+    I2SAudioCapture,
+    ESP32WakeWordDetector
+)
+
+__all__ = [
+    'Model', 
+    'VAD', 
+    'train_custom_verifier',
+    # ESP32 Integration
+    'ModelLoader',
+    'PlaceholderModelLoader',
+    'EdgeImpulseModelLoader',
+    'CustomModelLoader',
+    'ModelLoaderFactory',
+    'ESP32AudioConfig',
+    'I2SAudioCapture',
+    'ESP32WakeWordDetector'
+]
 
 FEATURE_MODELS = {
     "embedding": {

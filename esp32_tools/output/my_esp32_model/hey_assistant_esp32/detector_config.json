@@ -1,0 +1,9 @@
+{
+  "wake_word": "hey assistant",
+  "model_type": "placeholder",
+  "energy_threshold": 0.02,
+  "zcr_threshold": 0.1,
+  "sample_rate": 16000,
+  "buffer_size": 1280,
+  "detection_threshold": 0.5
+}
